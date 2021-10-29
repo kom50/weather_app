@@ -125,31 +125,16 @@ const App = () => {
 										) : (
 											<>
 												{(() => {
-													if (
-														Object.keys(
-															weatherReport
-														).length !== 0
-													) {
-														switch (
-															weatherReport
-																.weather.main
-														) {
+													if (Object.keys(weatherReport).length !== 0) {
+														switch (weatherReport.weather.main) {
 															case 'Haze':
-																return (
-																	<WiDayHaze className="icons" />
-																);
+																return <WiDayHaze className="icons" />
 															case 'Clouds':
-																return (
-																	<WiCloudy className="icons" />
-																);
+																return <WiCloudy className="icons" />
 															case 'Rainy':
-																return (
-																	<WiRain className="icons" />
-																);
+																return <WiRain className="icons" />
 															default:
-																return (
-																	<WiDaySunny className="icons" />
-																);
+																return <WiDaySunny className="icons" />
 														}
 													}
 												})()}
@@ -157,8 +142,7 @@ const App = () => {
 												<h5 className="card-title text-center">
 													<MdLocationOn
 														style={{
-															position:
-																'relative',
+															position:'relative',
 															top: -2,
 															fontSize: 24,
 														}}
@@ -192,23 +176,13 @@ const App = () => {
 													<p
 														className="card-text"
 														title="sunrise">
-														<WiSunrise
-															style={{
-																fontSize:
-																	'3rem',
-															}}
-														/>{' '}
+														<WiSunrise style={{fontSize:'3rem',}} />{' '}
 														{weatherReport.sunrise}
 													</p>
 													<p
 														className="card-text"
 														title="sunset">
-														<WiSunset
-															style={{
-																fontSize:
-																	'3rem',
-															}}
-														/>{' '}
+														<WiSunset style={{fontSize:'3rem',}} />{' '}
 														{weatherReport.sunset}
 													</p>
 												</div>
