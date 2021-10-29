@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/* full height */
+
+.full_height {
+    height: 100vh;
+}
+
+header {
+    position: relative;
+    top: -20px;
+}
+
+header .title {
+    text-align: center;
+    color: white;
+    font-variant: small-caps;
+}
+
+.bg {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    background-image: url('sky.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.main {
+    /* background-color: var(--bs-white); */
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 0 !important;
+    /* align-items: center; */
+}
+
+main {
+    position: relative;
+    top: -60px;
+}
+
+
+/* loader */
+
+.loader {
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid blue; */
+    display: grid;
+    place-items: center;
+}
+
+.loading {
+    line-height: 20rem;
+    height: 60px;
+    width: 60px;
+    border: 5px solid rgba(238, 237, 237, 0.5);
+    border-top-color: var(--bg-info);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: rotate 0.8s ease-in 1s infinite;
+    -webkit-animation: rotate 0.8s ease-in 1s infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 28rem !important;
+    height: 20rem !important;
+    color: white !important;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+}
+
+.card:hover {
+    transform: scale(.9);
+    -webkit-transform: scale(.9);
+    -moz-transform: scale(.9);
+    -ms-transform: scale(.9);
+    -o-transform: scale(.9);
+}
+
+.icons {
+    font-size: 4rem;
+    display: block;
+    width: 100%;
+}
+
+.card-text {
+    font-size: 20px !important;
+}
+
+
+/*  media query*/
+
+@media screen and (max-width: 400px) {
+    .main {
+        padding: 0 !important;
+    }
+    .card-text {
+        font-size: 14px !important;
+    }
+}
